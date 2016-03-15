@@ -11,3 +11,27 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export DEFAULT_USER=`whoami`
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init - zsh)"
+
+# alias
+alias be='bundle exec'
+alias sublime2='open -a ~/Applications/Sublime\ Text.app'
+alias sb='sublime2'
+alias atom='open -a /Applications/Atom.app'
+alias rubymine='open -a /Applications/RubyMine.app'
+alias sourcetree='open -a /Applications/SourceTree.app'
+alias st='sourcetree'
+
+# alias eb='source ./.aws_credential; eb'
+
+alias aws_208="export AWS_CREDENTIAL_FILE=/Users/aki_/.elasticbeanstalk/aws_credential_file.208; echo aws_credential_file.208"
+alias aws_smilenet="export AWS_CREDENTIAL_FILE=/Users/aki_/.elasticbeanstalk/aws_credential_file.smilenet; echo aws_credential_file.smilenet"
+alias aws_smilenet_staging="export AWS_CREDENTIAL_FILE=/Users/aki_/.elasticbeanstalk/aws_credential_file.smilenet_staging; echo aws_credential_file.smilenet_staging"
+
+alias aws_credential_file.fpapp_staging="export AWS_CREDENTIAL_FILE=/Users/aki_/.elasticbeanstalk/aws_credential_file.fpapp_staging; echo aws_credential_file.fpapp_staging"
+
